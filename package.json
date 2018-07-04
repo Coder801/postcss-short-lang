@@ -2,12 +2,7 @@
   "name": "postcss-lang-short",
   "version": "0.0.0",
   "description": "PostCSS plugin for short lang pseudoclass",
-  "keywords": [
-    "postcss",
-    "css",
-    "postcss-plugin",
-    "postcss-lang-short"
-  ],
+  "keywords": ["postcss", "css", "postcss-plugin", "postcss-lang-short"],
   "author": "coder <coder@zeoalliance.com>",
   "license": "MIT",
   "repository": "Coder801/postcss-lang-short",

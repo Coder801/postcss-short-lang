@@ -1,14 +1,28 @@
 var postcss = require('postcss');
 
-module.exports = postcss.plugin('postcss-langshort', function (opts) {
-    opts = opts || {};
+module.exports = postcss.plugin('postcss-langshort', function () {
 
-    const processor = postcss();
+    return function (css) {
+        css.walkRules(function (rule) {
+            if (rule.selector.indexOf(':lang') !== -1) {
+                var newSelector = [];
+                rule.selectors.forEach(function (selector) {
+                    if (selector.indexOf(':lang') !== -1) {
+                        const langsString = selector.match(
+                            /:lang\s?\((.*)\)/
+                        )[1];
+                        const langs = langsString.split(',');
 
-    return function (root, result) {
+                        langs.forEach(lang => {
+                            newSelector.push(
+                                selector.replace(/\(.*\)/, `(${lang.trim()})`)
+                            );
+                        });
+                    }
+                });
 
-      rule.walkDecls(function(decl) {
-        console.log(decl)
-      });
+                rule.selectors = newSelector;
+            }
+        });
     };
 });
