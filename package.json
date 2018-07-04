@@ -1,0 +1,38 @@
+{
+  "name": "postcss-lang-short",
+  "version": "0.0.0",
+  "description": "PostCSS plugin for short lang pseudoclass",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "postcss-lang-short"
+  ],
+  "author": "coder <coder@zeoalliance.com>",
+  "license": "MIT",
+  "repository": "Coder801/postcss-lang-short",
+  "bugs": {
+    "url": "https://github.com/Coder801/postcss-lang-short/issues"
+  },
+  "homepage": "https://github.com/Coder801/postcss-lang-short",
+  "dependencies": {
+    "postcss": "^6.0.16"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^22.4.2"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
