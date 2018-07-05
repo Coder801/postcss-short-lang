@@ -1,27 +1,29 @@
 var postcss = require('postcss');
 
-module.exports = postcss.plugin('postcss-langshort', function () {
+module.exports = postcss.plugin('postcss-short-lang', function () {
 
     return function (css) {
         css.walkRules(function (rule) {
+            // Parse all lang pseudoclass 'lang'
             if (rule.selector.indexOf(':lang') !== -1) {
-                var newSelector = [];
-                rule.selectors.forEach(function (selector) {
-                    if (selector.indexOf(':lang') !== -1) {
-                        const langsString = selector.match(
-                            /:lang\s?\((.*)\)/
-                        )[1];
-                        const langs = langsString.split(',');
+                const unfolding = [];
 
-                        langs.forEach(lang => {
-                            newSelector.push(
-                                selector.replace(/\(.*\)/, `(${lang.trim()})`)
-                            );
-                        });
+                rule.selectors.forEach(function (selector) {
+                    const langs = selector
+                      .match(/:lang\s?\((.*)\)/)[1]
+                      .split(',');
+
+                    // Check language-code if more than one
+                    if(langs.length > 1) {
+                      langs.forEach(lang => {
+                          unfolding.push(
+                              selector.replace(/\(.*\)/, `(${lang.trim()})`)
+                          );
+                      });
                     }
                 });
 
-                rule.selectors = newSelector;
+                rule.selectors = unfolding;
             }
         });
     };

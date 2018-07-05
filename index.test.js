@@ -11,6 +11,6 @@ function run(input, output, opts) {
         });
 }
 
-it('does something', () => {
+it('Check basic transformation', () => {
     return run('a:lang(en, de){}', 'a:lang(en), a:lang(de){}');
 });

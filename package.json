@@ -1,15 +1,15 @@
 {
   "name": "postcss-lang-short",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "PostCSS plugin for short lang pseudoclass",
   "keywords": ["postcss", "css", "postcss-plugin", "postcss-lang-short"],
   "author": "coder <coder@zeoalliance.com>",
   "license": "MIT",
-  "repository": "Coder801/postcss-lang-short",
+  "repository": "Coder801/postcss-short-lang",
   "bugs": {
-    "url": "https://github.com/Coder801/postcss-lang-short/issues"
+    "url": "https://github.com/Coder801/postcss-short-lang/issues"
   },
-  "homepage": "https://github.com/Coder801/postcss-lang-short",
+  "homepage": "https://github.com/Coder801/postcss-short-lang",
   "dependencies": {
     "postcss": "^6.0.16"
   },
