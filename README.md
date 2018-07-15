@@ -1,27 +1,29 @@
-# PostCSS Lang Short [![Build Status][ci-img]][ci]
+# PostCSS Short Lang [![Build Status][ci-img]][ci]
 
-[PostCSS] plugin for short lang pseudoclass.
+Small [PostCSS] plugin for more shorter lang pseudoclass.
 
-[PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/Coder801/postcss-lang-short.svg
-[ci]:      https://travis-ci.org/Coder801/postcss-lang-short
+[postcss]: https://github.com/postcss/postcss
+[ci-img]: https://travis-ci.org/Coder801/postcss-lang-short.svg
+[ci]: https://travis-ci.org/Coder801/postcss-lang-short
 
 ```css
-.foo {
-    /* Input example */
+.example:lang(en, de, fr) {
+    /* Css properties */
 }
 ```
 
 ```css
-.foo {
-  /* Output example */
+.example:lang(en),
+.example:lang(de),
+.example:lang(fr) {
+    /* Css properties */
 }
 ```
 
 ## Usage
 
 ```js
-postcss([ require('postcss-lang-short') ])
+postcss([require('postcss-short-lang')]);
 ```
 
 See [PostCSS] docs for examples for your environment.
