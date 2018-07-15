@@ -18,6 +18,6 @@ h1:lang(en), h1:lang(de), h1:lang(fr) {
 	font-size: 70%;
 }
 
-[data-value="foo"]:lang(en), [data-value="foo"]:lang(de), [data-value="foo"]:lang(fr) {
+[data-value*="foo"]:lang(en), [data-value*="foo"]:lang(de), [data-value*="foo"]:lang(fr) {
 	line-height: 1.2;
 }

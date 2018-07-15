@@ -1,33 +1,44 @@
 {
-  "name": "postcss-lang-short",
-  "version": "1.0.0",
-  "description": "PostCSS plugin for short lang pseudoclass",
-  "keywords": ["postcss", "css", "postcss-plugin", "postcss-lang-short"],
-  "author": "coder <coder@zeoalliance.com>",
-  "license": "MIT",
-  "repository": "Coder801/postcss-short-lang",
-  "bugs": {
-    "url": "https://github.com/Coder801/postcss-short-lang/issues"
-  },
-  "homepage": "https://github.com/Coder801/postcss-short-lang",
-  "dependencies": {
-    "postcss": "^6.0.16"
-  },
-  "devDependencies": {
-    "eslint": "^4.18.2",
-    "eslint-config-postcss": "^2.0.2",
-    "jest": "^22.4.2"
-  },
-  "scripts": {
-    "test": "jest && eslint *.js"
-  },
-  "eslintConfig": {
-    "extends": "eslint-config-postcss/es5",
-    "env": {
-      "jest": true
+    "name": "postcss-short-lang",
+    "version": "1.0.0",
+    "description": "PostCSS plugin for short lang pseudoclass",
+    "keywords": [
+        "postcss",
+        "css",
+        "postcss-plugin",
+        "postcss-short-lang"
+    ],
+    "author": "Dmitriy <donischenko801@gmail.com>",
+    "license": "MIT",
+    "repository": "Coder801/postcss-short-lang",
+    "bugs": {
+        "url": "https://github.com/Coder801/postcss-short-lang/issues"
+    },
+    "homepage": "https://github.com/Coder801/postcss-short-lang",
+    "dependencies": {
+        "postcss": "^6.0.16"
+    },
+    "devDependencies": {
+        "eslint": "^4.18.2",
+        "eslint-config-postcss": "^2.0.2",
+        "jest": "^22.4.2",
+        "postcss-tape": "^2.2.0",
+        "pre-commit": "^1.2.2"
+    },
+    "scripts": {
+        "clean": "git clean -X -d -f",
+        "prepublish": "npm test",
+        "test": "echo 'Running tests...'; npm run test:js && npm run test:tape",
+        "test:js": "eslint *.js --cache --ignore-pattern .gitignore",
+        "test:tape": "postcss-tape"
+    },
+    "eslintConfig": {
+        "extends": "eslint-config-postcss/es5",
+        "env": {
+            "jest": true
+        }
+    },
+    "jest": {
+        "testEnvironment": "node"
     }
-  },
-  "jest": {
-    "testEnvironment": "node"
-  }
 }

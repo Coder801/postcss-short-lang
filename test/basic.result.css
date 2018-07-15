@@ -1,0 +1,23 @@
+a:lang(en), a:lang(de), a:lang(fr) {
+	display: block;
+}
+
+p:lang(en), p:lang(de), p:lang(fr) {
+	display: none;
+}
+
+h1:lang(en), h1:lang(de), h1:lang(fr) {
+	position: relative;
+}
+
+.class:lang(en), .class:lang(de), .class:lang(fr) {
+	position: fixed;
+}
+
+#id:lang(en), #id:lang(de), #id:lang(fr) {
+	font-size: 70%;
+}
+
+[data-value*="foo"]:lang(en), [data-value*="foo"]:lang(de), [data-value*="foo"]:lang(fr) {
+	line-height: 1.2;
+}
