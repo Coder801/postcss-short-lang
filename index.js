@@ -19,6 +19,8 @@ module.exports = postcss.plugin('postcss-short-lang', function () {
                                 selector.replace(/\(.*\)/, `(${lang.trim()})`)
                             );
                         });
+                    } else {
+                        unfolding.push(langs);
                     }
                 });
 

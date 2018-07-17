@@ -1,7 +1,10 @@
 module.exports = {
     'postcss-short-lang': {
         basic: {
-            message: 'supports basic usage'
+            message: 'Basic conversion'
+        },
+        single: {
+            message: 'Checking whether the default values change'
         }
     }
 };
