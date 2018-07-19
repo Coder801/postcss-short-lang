@@ -1,0 +1,27 @@
+a:lang(en) {
+	display: block;
+}
+
+p:lang(en) {
+	display: none;
+}
+
+h1:lang(en) {
+	position: relative;
+}
+
+.class:lang(en) {
+	position: fixed;
+}
+
+#id:lang(en) {
+	font-size: 70%;
+}
+
+[data-value*="foo"]:lang(en) {
+	line-height: 1.2;
+}
+
+.class > .with > .child:lang(en) {
+  background-color: red;
+}

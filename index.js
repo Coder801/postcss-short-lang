@@ -20,7 +20,7 @@ module.exports = postcss.plugin('postcss-short-lang', function () {
                             );
                         });
                     } else {
-                        unfolding.push(langs);
+                        unfolding.push(selector);
                     }
                 });
 

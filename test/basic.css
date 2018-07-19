@@ -21,3 +21,7 @@ h1:lang(en, de, fr) {
 [data-value*="foo"]:lang(en, de, fr) {
 	line-height: 1.2;
 }
+
+.class > .with > .child:lang(en, de, fr) {
+  background-color: red;
+}
